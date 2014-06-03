@@ -1,0 +1,13 @@
+%script{:src => '//cdn.cine.io/cineio.js'}
+:javascript
+  window.onload = function(e) {
+    CineIO.init("#{ENV['CINE_IO_PUBLIC_KEY']}");
+    var streamId = "#{@stream.id}"
+      , domId = 'player';
+
+    CineIO.play(streamId, domId);
+  }
+
+%h1= "Viewing stream #{@stream.id}"
+
+#player

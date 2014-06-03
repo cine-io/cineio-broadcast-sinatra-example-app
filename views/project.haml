@@ -1,0 +1,10 @@
+%h1= "Welcome to #{@project.name}!"
+
+%h2 Available Streams
+%ul
+  - @streams.each do |stream|
+    %li
+      = "#{stream.id}:"
+      %a{:href => "/stream/#{stream.id}"}= "play"
+      |
+      %a{:href => "/publish/#{stream.id}"}= "publish"

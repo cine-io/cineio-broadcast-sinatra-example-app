@@ -1,0 +1,19 @@
+%script{:src => '//cdn.cine.io/cineio.js'}
+:javascript
+  window.onload = function(e) {
+    CineIO.init("#{ENV['CINE_IO_PUBLIC_KEY']}");
+
+    var streamId = "#{@stream.id}"
+      , password = "#{@stream.password}"
+      , domId = 'publisher';
+
+    var publisher = CineIO.publish(
+      streamId, password, domId
+    );
+
+    publisher.start();
+  }
+
+%h1= "Publishing to stream #{@stream.id}"
+
+#publisher

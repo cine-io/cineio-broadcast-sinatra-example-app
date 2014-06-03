@@ -1,0 +1,37 @@
+!!! 5
+%html
+  %head
+    %title= "cine.io Sinatra Example"
+    :css
+      nav li {
+        list-style-type: none;
+        display: inline;
+      }
+      nav li:after {
+        content: "|";
+      }
+      nav li:last-child:after {
+        content: "";
+      }
+
+      #player, #publisher {
+        width: 720px;
+        height: 404px;
+      }
+
+  %body
+    %header
+      %nav
+        %ul
+          %li
+            %a{:href => '/'} Home
+          %li
+            %a{:href => '/streams/create'} New Stream
+
+      #content= yield
+
+      %footer
+        %p
+          Copyright &copy;
+          = Time.now.year
+          cine.io
