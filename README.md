@@ -1,4 +1,4 @@
-# cine.io Sinatra Example
+# cine.io Example Application in Sinatra
 
 This repository demonstrates the use of the [cine.io Ruby SDK][cineio-ruby] for a simple app that can create streams, publish to them, and play them back.
 
