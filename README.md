@@ -27,3 +27,14 @@ This repository demonstrates the use of the [cine.io Ruby SDK][cineio-ruby] for 
 <!-- external links -->
 [cineio]:https://www.cine.io/
 [cineio-ruby]:https://github.com/cine-io/cineio-ruby
+
+### Deploy this app to heroku
+
+```term
+git clone git@github.com:cine-io/cineio-sinatra-example-app.git
+cd cineio-sinatra-example-app/
+heroku apps:create
+git push heroku master
+heroku addons:add cine
+heroku open
+```
