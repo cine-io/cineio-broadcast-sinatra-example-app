@@ -3,14 +3,14 @@
   %head
     %title= "cine.io Sinatra Example"
     :css
-      nav li {
+      ul.inline li {
         list-style-type: none;
         display: inline;
       }
-      nav li:after {
+      ul.inline li:after {
         content: "|";
       }
-      nav li:last-child:after {
+      ul.inline li:last-child:after {
         content: "";
       }
 
@@ -22,18 +22,24 @@
   %body
     %header
       %nav
-        %ul
+        %ul.inline
           %li
-            %a{:href => '/'} Home
+            %a{:href => "https://www.cine.io/docs"} Documentation
           %li
-            %a{:href => '/streams/create'} New Stream
+            %a{:href => "https://github.com/cine-io/cineio-ruby"} Ruby Gem
           %li
-            %a{:href => 'https://www.cine.io/docs'} Documentation
+            %a{:href => "https://github.com/cine-io/js-sdk"} JS SDK
+    %hr
+      %ul.inline
+        %li
+          %a{:href => '/'} Home
+        %li
+          %a{:href => '/streams/create'} New Stream
 
-      #content= yield
-
-      %footer
-        %p
-          Copyright &copy;
-          = Time.now.year
-          %a{:href => 'https://www.cine.io'} cine.io
+    #content= yield
+    %hr
+    %footer
+    %p
+      Copyright &copy;
+      = Time.now.year
+      %a{:href => 'https://www.cine.io'} cine.io
