@@ -1,10 +1,14 @@
-# cine.io Example Application in Sinatra
+# [cine.io][cineio] Example Application in Sinatra
 
 This repository demonstrates the use of the [cine.io Ruby SDK][cineio-ruby] for a simple app that can create streams, publish to them, and play them back.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/mattreduce/cineio-sinatra-example-app)
+## Try it on Heroku
 
-## How to Use
+Click the button below to magically deploy up this example to your Heroku account. A [cine.io][cineio] plan will automatically be included for free.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/cine-io/cineio-sinatra-example-app)
+
+## Run Locally
 
 1. Sign up for your own API key at [cine.io][cineio].
 2. Set up your environment:
