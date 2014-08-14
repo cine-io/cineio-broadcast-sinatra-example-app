@@ -27,6 +27,8 @@
             %a{:href => '/'} Home
           %li
             %a{:href => '/streams/create'} New Stream
+          %li
+            %a{:href => 'https://www.cine.io/docs'} Documentation
 
       #content= yield
 
@@ -34,4 +36,4 @@
         %p
           Copyright &copy;
           = Time.now.year
-          cine.io
+          %a{:href => 'https://www.cine.io'} cine.io
