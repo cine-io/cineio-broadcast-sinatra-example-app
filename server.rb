@@ -7,9 +7,13 @@ def cine
 end
 
 get '/' do
-  @project = cine.project.get
-  @streams = cine.streams.index
-  haml :project
+  if ENV['CINE_IO_SECRET_KEY']
+    @project = cine.project.get
+    @streams = cine.streams.index
+    haml :project
+  else
+    haml :not_configured
+  end
 end
 
 get '/streams/create' do
