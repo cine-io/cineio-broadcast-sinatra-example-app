@@ -2,6 +2,9 @@ require 'sinatra'
 require 'cine_io'
 require 'haml'
 
+require "bundler"
+Bundler.require
+
 def cine
   @client ||= CineIo::Client.new(secretKey: ENV['CINE_IO_SECRET_KEY'])
 end
