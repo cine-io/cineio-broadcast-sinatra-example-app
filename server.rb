@@ -4,15 +4,17 @@ Bundler.require
 require 'sinatra'
 require 'cine_io'
 require 'haml'
+require './cine_io_keys'
 
 def cine
-  @client ||= CineIo::Client.new(secretKey: ENV['CINE_IO_SECRET_KEY'])
+  @client ||= CineIo::Client.new(secretKey: CineIoKeys.secretKey)
 end
 
 get '/' do
-  if ENV['CINE_IO_SECRET_KEY']
+  if CineIoKeys.secretKey
     @project = cine.project.get
     @streams = cine.streams.index
+    @publicKey = CineIoKeys.publicKey
     haml :project
   else
     haml :not_configured
@@ -26,10 +28,12 @@ end
 
 get '/stream/:id' do
   @stream = cine.streams.get params[:id]
+  @publicKey = CineIoKeys.publicKey
   haml :play_stream
 end
 
 get '/publish/:id' do
   @stream = cine.streams.get params[:id]
+  @publicKey = CineIoKeys.publicKey
   haml :publish_stream
 end

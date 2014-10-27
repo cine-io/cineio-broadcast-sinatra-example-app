@@ -1,7 +1,7 @@
 %script{:src => '//cdn.cine.io/cineio.js'}
 :javascript
   window.onload = function(e) {
-    CineIO.init("#{ENV['CINE_IO_PUBLIC_KEY']}");
+    CineIO.init("#{@publicKey}");
 
     var streamId = "#{@stream.id}"
       , password = "#{@stream.password}"
