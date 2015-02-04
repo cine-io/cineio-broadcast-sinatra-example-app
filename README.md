@@ -1,6 +1,6 @@
-# [cine.io][cineio] Example Application in Sinatra
+# [cine.io][cineio] Broadcast Example Application in Sinatra
 
-This repository demonstrates the use of the [cine.io Ruby SDK][cineio-ruby] for a simple app that can create streams, publish to them, and play them back.
+This is an example application in Ruby and Sinatra showing the capabilities of [cine.io broadcast][cineio-broadcast]. It uses the [cine.io Broadcast JS SDK][cineio-broadcast-js-sdk] and the [cine.io Ruby SDK][cineio-ruby]. This sample app can create streams, publish to them, and play them back.
 
 ## Try it on Heroku
 
@@ -32,4 +32,6 @@ Click the button below to magically deploy up this example to your Heroku accoun
 
 <!-- external links -->
 [cineio]:https://www.cine.io/
+[cineio-broadcast]:https://www.cine.io/products/broadcast
 [cineio-ruby]:https://github.com/cine-io/cineio-ruby
+[cineio-broadcast-js-sdk]:https://github.com/cine-io/broadcast-js-sdk
