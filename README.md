@@ -6,7 +6,7 @@ This is an example application in Ruby and Sinatra showing the capabilities of [
 
 Click the button below to magically deploy up this example to your Heroku account. A [cine.io][cineio] plan will automatically be included for free.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/cine-io/cineio-sinatra-example-app)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/cine-io/cineio-broadcast-sinatra-example-app)
 
 ## Run Locally
 
